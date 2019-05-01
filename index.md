@@ -4,3 +4,13 @@
 
 layout: home
 ---
+
+{% ical url: https://space.floern.com/launch.ics reverse: true only_future: true %}
+  {{ event.summary }}
+  {{ event.description }}
+  {{ event.simple_html_description }}
+  {{ event.start_time }}
+  {{ event.end_time }}
+  {{ event.url }}
+  {{ event.attendees }}
+{% endical %}
